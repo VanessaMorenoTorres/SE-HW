@@ -1,37 +1,43 @@
 // DD and PZ HW app 
-// const list = document.querySelector(".list");
-// let buttons = document.querySelectorAll(".boroughs");
+// const list = document.querySelector(".list"); 
+// let buttons = document.querySelectorAll(".boroughs"); //give valies to button and compare values 
 // let input = document.querySelector("#numOfComps");
 
-// buttons.forEach((boroughs) =>{
-//    boroughs.addEventListener('click',)
-// }
-// const fetch = require('node-fetch')
-
-// const fetch = require('node-fetch') ----(only works in terminal soes not show up in browser)
-   fetch('https://data.cityofnewyork.us/resource/erm2-nwe9.json?agency=NYPD&$limit=5')
+function bSelector(e){
+   let boroName = e.target.id
+   let limit = document.getElementById('numOfComps').value||10 //short circuit evaluation use conditional opperators (sets default limit to 10)
+   console.log(limit)
+   fetch(`https://data.cityofnewyork.us/resource/erm2-nwe9.json?agency=NYPD&$limit=${limit}&borough=${boroName.toUpperCase()}`)
       .then(response => response.json())
       .then(data => displayData(data))
       .catch(error => console.log(error))
 
-// let reportList = []
-// document.body.addEventListener('click', function(onclick){
-//    if( event.target.id == 'brooklyn'){
-//       displayData();
-//    };
-// });
+   console.log(e.target.innerHTML)
+}
 
 function displayData(d) {
+   let reportList = document.getElementById('list')
+   reportList.innerHTML = ''
    for(let i=0; i<d.length; i++){
-   
-      let report = {
-         borough:d[i].borough, 
-         descriptor:d[i].descriptor, 
-         resolution:d[i].resolution_description
-     }
-     reportList.push(report)
+      let descriptor = d[i].descriptor
+      let resolution = d[i].resolution_description
+      reportList.innerHTML += `<li>${descriptor} : ${resolution}</li>`
    }
-   return (reportList)
+   console.log(d)
 }
+   // console.log(d)
+   // for(let i=0; i<d.length; i++){
+   //    let report = {
+         // borough:d[i].borough, 
+         // descriptor:d[i].descriptor, 
+         // resolution:d[i].resolution_description
+   //   }
+   //   reportList.push(report)
+   // }
+   // return (reportList)
+// }
+
+
+
 
 // document.getElementsByClassName("button").addEventListener("click" , displayData());

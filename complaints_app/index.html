@@ -15,14 +15,14 @@
 <body>
     <input type="text" id="numOfComps" placeholder="# OF COMPLAINTS"/>
     <!-- <button type="button" class="boroughs" id="brooklyn" onclick="document.getElementById('list').innerHTML=displayData()">Brooklyn</button> -->
-    <button type="button" class="boroughs" id="brooklyn">Brooklyn</button>
-    <button type="button" class="boroughs" id="manhattan">Manhattan</button>
-    <button type="button" class="boroughs" id="queens">Queens</button>
-    <button type="button" class="boroughs" id="bronxs">Bronxs</button>
-    <button type="button" class="boroughs" id="statenIsland">Staten Island</button>
-    <div class="listCont">
-        <ul class= 'list'>
-        </ul>
+    <button type="button" class="boroughs" id="brooklyn" onclick="bSelector(event)">Brooklyn</button>
+    <button type="button" class="boroughs" id="manhattan"onclick="bSelector(event)">Manhattan</button>
+    <button type="button" class="boroughs" id="queens" onclick="bSelector(event)">Queens</button>
+    <button type="button" class="boroughs" id="bronx" onclick="bSelector(event)">Bronx</button>
+    <button type="button" class="boroughs" id="staten Island" onclick="bSelector(event)">Staten Island</button>
+    <div class="listCont" id="list">
+        <!-- <ul class= 'list'>
+        </ul> -->
     </div>
 </body>
 </html>
