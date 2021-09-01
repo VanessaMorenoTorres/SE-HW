@@ -2,13 +2,14 @@
 
 import React from 'react';
 
-function Big(prop){
+function Bbox(prop){
     return(
-        <div>
+        <div className="big">
             <h3>{prop.title}</h3>
+            <p>821</p>
             <a src="">Picture here</a>
         </div>
     )
 }
 
-export default Big
+export default Bbox
