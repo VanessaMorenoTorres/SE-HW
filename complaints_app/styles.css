@@ -1,0 +1,8 @@
+/* dd and pr hw app */
+.boroughs{
+    background-color: blue;
+    color: white;
+}
+.boroughs:hover{
+    background-color: rgb(243, 225, 31);
+}

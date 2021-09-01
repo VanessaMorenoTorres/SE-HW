@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id= 'p1'></p> <br>
+    <p id= 'p2'></p> <br>
+    <p id= 'p3'></p> <br>
+    <p id= 'p4'></p> <br>
+  <script>
+//Define a new class called Circle with appropriate attributes and instantiate a few Circle objects.
+    // Write a function called circle_area that returns the area of the object. 
+    // // Write a function for diameter of the object.
+    // var head =  "<h2>" + 'Circle Information' + "</h2>";
+    var text = "<ul>";
+    class Circle{
+        constructor(color, radius){
+            this.color = color;
+            this.radius = radius;
+            this.circle_area = function (){
+                let area = (3.14*this.radius*this.radius)
+                text = text + "<li>" + 'The area of the ' + this.color + ' circle is ' + area + "<br>"
+                return text
+            }
+            this.diameter = function (){
+                let diam = (2* this.radius)
+                text = text+ 'The diameter of the ' + this.color + ' circle is '+ diam + "</li>"
+                return text
+            }
+        }
+    }
+    const redCir = new Circle('red', 2)
+    redCir.circle_area();
+    redCir.diameter();
+
+    const blueCir = new Circle('blue', 4)
+    blueCir.circle_area();
+    blueCir.diameter();
+
+    const yellCir = new Circle('yellow', 2)
+    yellCir.circle_area();
+    yellCir.diameter();
+    
+    text = text +  "</ul>";
+    document.getElementById("p1").innerHTML = text;
+
+// Define a new class called Rectangle with appropriate attributes and instantiate a few Rectangle objects.
+    // Write a function called rectangle_area that returns the area of the given object.
+    // Write a function total_sides that returns the number of sides of the object.
+    text = "<ul>";
+    class Rectangle{
+        constructor(color, height, width){
+            this.color = color;
+            this.height = height;
+            this.width = width;
+            this.rectangle_area = function (){
+                let area = (this.height*this.width)
+                text = text + "<li>" + 'The area of the ' + this.color + ' rectangle is '+ area + "<br>"
+                return text
+            }
+            this.total_sides = function (){
+                let sides = 4
+                text = text+ 'The ' + this.color + ' rectangle has '+ sides + ' sides ' + "</li>"
+                return text
+            }
+        }
+    }
+    const greenRec = new Rectangle('green', 3, 1)
+    greenRec.rectangle_area();
+    greenRec.total_sides();
+
+    const purpRec = new Rectangle('purple', 4,2)
+    purpRec.rectangle_area();
+    purpRec.total_sides();
+
+    const oranRec = new Rectangle('orange',6, 3)
+    oranRec.rectangle_area();
+    oranRec.total_sides();
+    
+    text = text +  "</ul>";
+    document.getElementById("p2").innerHTML = text;
+// Define a new class called Square with appropriate attributes and instantiate a few Square objects.
+    // Write a function called square_area that returns the area of the given object.
+    // Write a function total_sides that returns the number of sides of the object.
+    text = "<ul>";
+    class Square{
+        constructor(color, side){
+            this.color = color;
+            this.side = side;
+            this.square_area = function (){
+                let area = (this.side*this.side)
+                text = text + "<li>" + 'The area of the ' + this.color + ' square is '+ area + "<br>"
+                return text
+            }
+            this.stotal_sides = function (){
+                let sides = 4
+                text = text+ 'The ' + this.color + ' square has '+ sides + ' sides ' + "</li>"
+                return text
+            }
+        }
+    }
+    const magSqu = new Square('magenta', 4)
+    magSqu.square_area();
+    magSqu.stotal_sides();
+
+    const tealSqu = new Square('teal', 5)
+    tealSqu.square_area();
+    tealSqu.stotal_sides();
+
+    const plumSqu = new Square('plum',6)
+    tealSqu.square_area();
+    tealSqu.stotal_sides();
+    
+    text = text +  "</ul>";
+    document.getElementById("p3").innerHTML = text;
+  </script>  
+</body>
+</html>

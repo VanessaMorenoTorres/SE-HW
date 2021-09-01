@@ -1,0 +1,31 @@
+<!-- Dougie Donut and Pizza Rat Homeweork App -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dougie Donut & Pizzza Rat App</title>
+    <link href="styles.css" rel="stylesheet">
+    <!-- <script src="app.js" async></script> -->
+    <script src="app.js"></script>
+
+    <h1>WHERE CAN WE CAUSE TROUBLE TODAY?</h1>
+</head>
+<body>
+    <input type="text" id="numOfComps" placeholder="# OF COMPLAINTS"/>
+    <!-- <button type="button" class="boroughs" id="brooklyn" onclick="document.getElementById('list').innerHTML=displayData()">Brooklyn</button> -->
+    <button type="button" class="boroughs" id="brooklyn" onclick="bSelector(event)">Brooklyn</button>
+    <button type="button" class="boroughs" id="manhattan"onclick="bSelector(event)">Manhattan</button>
+    <button type="button" class="boroughs" id="queens" onclick="bSelector(event)">Queens</button>
+    <button type="button" class="boroughs" id="bronx" onclick="bSelector(event)">Bronx</button>
+    <button type="button" class="boroughs" id="staten Island" onclick="bSelector(event)">Staten Island</button>
+    <div class="listCont" id="list">
+        <!-- <ul class= 'list'>
+        </ul> -->
+    </div>
+</body>
+</html>
+<!-- <script>
+    document.getElementsByClassName("button").addEventListener("click" , displayData());
+    </script> -->
