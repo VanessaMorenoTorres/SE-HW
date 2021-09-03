@@ -26,14 +26,9 @@ export default class Div3 extends Component {
   };
   render() {
     return (
-      <div>
         <div>
           <h3 onClick={() => this.changeIt(this.state.tardis.name)}>{this.state.tardis.name}</h3>
         </div>
-        <div>
-          <h3 onClick={() => this.changeIt(this.state.tardis.name)}>{this.state.tardis.name}</h3>
-        </div>
-      </div>
     );
   }
 }

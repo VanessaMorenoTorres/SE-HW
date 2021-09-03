@@ -6,6 +6,7 @@ export default class Div2 extends Component {
     return (
       <div>
         <Div3 />
+        <Div3 />
       </div>
     );
   }
